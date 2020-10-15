@@ -103,25 +103,25 @@ for follower in followers.items(400):
     if follower.followers_count == 0:
         noFollowers = True
     else:
-        noFollowers = True
+        noFollowers = False
     
     # Check if account has any statuses
     if follower.statuses_count == 0:
         noStatuses = True
     else:
-        noStatuses = True
+        noStatuses = False
         
     # Check if account has a non-default profile image
     if follower.default_profile_image == True:
         noProfilePicture = True
     else:
-        noProfilePicture = True
+        noProfilePicture = False
         
     # Check if follower account was created this month
     if follower.created_at.strftime("%m/%y") == date:
         createdRecent = True
     else:
-        createdRecent = True
+        createdRecent = False
         
     # If all conditions are met follower is determined to be a bot
     if noFollowers == True & \
